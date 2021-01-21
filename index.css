@@ -7,11 +7,6 @@ body {
   justify-content: center;
 }
 
-.js-clock h1 {
-  color: teal;
-  size: 50px;
-}
-
 .form,
 .greetings {
   display: none;
