@@ -7,6 +7,13 @@ body {
   justify-content: center;
 }
 
+.js-clock {
+  font-size: 80px;
+}
+.js-greetings {
+  font-size: 30px;
+}
+
 .form,
 .greetings {
   display: none;
