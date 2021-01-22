@@ -10,18 +10,28 @@
     <script defer src="background.js"></script>
   </head>
   <body>
-    <div class="js-clock">
-      <h1>00:00</h1>
+    <div class="js-clock css-clock">
+      <span class="js-clock__time">00:00</span>
     </div>
 
-    <form class="js-nameForm form">
-      <input type="text" placeholder="What is your name?" />
+    <form class="js-nameForm css-nameForm form">
+      <input
+        class="css-nameForm__input"
+        type="text"
+        placeholder="What is your name?"
+      />
     </form>
-    <h4 class="js-greetings greetings"></h4>
+    <span class="js-greetings css-greetings greetings"></span>
 
-    <form class="js-todoForm">
-      <input type="text" placeholder="Write a To Do" />
-    </form>
-    <ul class="js-todoList"></ul>
+    <div class="todo__container">
+      <form class="js-todoForm css-todoForm">
+        <input
+          class="css-todoForm__input"
+          type="text"
+          placeholder="Write a To Do"
+        />
+      </form>
+      <ul class="js-todoList css-todoList"></ul>
+    </div>
   </body>
 </html>

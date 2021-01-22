@@ -9,7 +9,7 @@
 
 const clockContainer = document.querySelector(".js-clock"),
   //looks for children of the 'doc'(element)
-  clockTitle = clockContainer.querySelector("h1");
+  clockTitle = clockContainer.querySelector(".js-clock__time");
 //looks for children of the 'js-clock'(element)
 //const가 둘다 적용된 상태
 

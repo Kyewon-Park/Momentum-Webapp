@@ -31,7 +31,6 @@ function handleSubmit(event) {
 
 function paintForm() {
   form.classList.add(SHOWING_CN); //form을 보이게 함
-  greeting.classList.remove(SHOWING_CN); //greeting을 안보이게 함
   form.addEventListener("submit", handleSubmit); //이벤트리스너를 실행시킨다.
   //submit 이벤트가 일어나면 handleSubmit(event)
 }

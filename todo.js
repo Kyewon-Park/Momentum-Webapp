@@ -4,6 +4,8 @@ const todoForm = document.querySelector(".js-todoForm"),
 
 const TODOS_LS = "toDos";
 
+const LINETHROU_CN = "lineThrough";
+
 let toDos = []; //todo item saving container
 
 function deleteTodo(event) {
@@ -32,8 +34,19 @@ function paintTodo(text) {
   const span = document.createElement("span");
   const newId = toDos.length + 1;
   delBtn.innerText = "❌";
-  span.innerText = text;
+  span.innerText = `${text}   `;
+
+  //체크박스 추가
+  const chkBox = document.createElement("input");
+  chkBox.type = "checkBox";
+  chkBox.addEventListener("click", function makeLine(event) {
+    //체크박스 클릭하면 글자 중간 관통하는 라인 생성
+    let liChildren = li.children;
+    liChildren[1].classList.toggle(LINETHROU_CN);
+  });
+
   //todoList(ul) 안의 li 안의 span / btn
+  li.appendChild(chkBox);
   li.appendChild(span);
   li.appendChild(delBtn);
   li.id = newId;
@@ -45,6 +58,18 @@ function paintTodo(text) {
     id: newId,
   }; //1부터 시작
   toDos.push(todoObj); //객체 저장
+
+  //li, btn 스타일 적용
+  li.style.color = "white";
+  li.style.fontSize = "25px";
+  li.style.paddingBottom = "10px";
+  li.style.display = "flex";
+  li.style.alignItems = "center";
+  span.style.marginBottom = "5px";
+  span.style.padding = "0 10px";
+  delBtn.style.backgroundColor = "rgba(0,0,0,0)";
+  delBtn.style.border = "none";
+  delBtn.style.outline = "none";
 }
 
 function saveTodo() {

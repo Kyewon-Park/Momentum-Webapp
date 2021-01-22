@@ -7,11 +7,43 @@ body {
   justify-content: center;
 }
 
-.js-clock {
-  font-size: 80px;
+.css-clock {
+  font-size: 160px;
+  color: white;
+  font-weight: 900;
 }
-.js-greetings {
+.css-greetings {
+  font-size: 55px;
+  color: white;
+  padding-bottom: 40px;
+  font-weight: 600;
+}
+.css-todoForm__input,
+.css-nameForm__input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
   font-size: 30px;
+  border-bottom: 2px solid white;
+  height: 40px;
+  width: 600px;
+  outline: none;
+  caret-color: white;
+  color: white;
+}
+
+.css-todoForm__input::placeholder,
+.css-nameForm__input::placeholder {
+  color: white;
+  font-size: 35px;
+}
+
+.css-todoList {
+  list-style: none;
+}
+
+.lineThrough {
+  color: #e2e2e2;
+  text-decoration-line: line-through;
 }
 
 .form,
@@ -20,4 +52,13 @@ body {
 }
 .showing {
   display: block;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
