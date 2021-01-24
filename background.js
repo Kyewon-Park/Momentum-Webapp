@@ -11,7 +11,7 @@ function paintImage(imgNumber) {
 
 function generateRandom() {
   //자바스크립트에는 Math 모듈이 있음
-  const number = Math.floor(Math.random() * 5);
+  const number = Math.floor(Math.random() * 3);
   return number;
 }
 

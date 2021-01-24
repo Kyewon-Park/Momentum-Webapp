@@ -34,14 +34,16 @@ function paintTodo(text) {
   const span = document.createElement("span");
   const newId = toDos.length + 1;
   delBtn.innerText = "❌";
-  span.innerText = `${text}   `;
+  span.innerText = `${text}`;
 
+  //커스텀 영역========================================
+  let liChildren = li.children;
   //체크박스 추가
   const chkBox = document.createElement("input");
   chkBox.type = "checkBox";
   chkBox.addEventListener("click", function makeLine(event) {
     //체크박스 클릭하면 글자 중간 관통하는 라인 생성
-    let liChildren = li.children;
+
     liChildren[1].classList.toggle(LINETHROU_CN);
   });
 
@@ -62,7 +64,7 @@ function paintTodo(text) {
   //li, btn 스타일 적용
   li.style.color = "white";
   li.style.fontSize = "25px";
-  li.style.paddingBottom = "10px";
+  li.style.paddingTop = "20px";
   li.style.display = "flex";
   li.style.alignItems = "center";
   span.style.marginBottom = "5px";
@@ -70,6 +72,19 @@ function paintTodo(text) {
   delBtn.style.backgroundColor = "rgba(0,0,0,0)";
   delBtn.style.border = "none";
   delBtn.style.outline = "none";
+
+  //애니메이션 적용
+
+  //TODO: toggle line localStorage에 저장
+
+  //TODO: 에니메이션 추가
+  liChildren[2].style.opacity = "0";
+  li.addEventListener("mouseenter", (e) => {
+    liChildren[2].style.opacity = "1";
+  });
+  li.addEventListener("mouseleave", (e) => {
+    liChildren[2].style.opacity = "0";
+  });
 }
 
 function saveTodo() {
@@ -81,12 +96,14 @@ function saveTodo() {
   //JSON.stringify는 자바스크립트 Obj를 string으로 바꿔준다.
 }
 
-function handleSubmit(event) {
+function handleTodoSubmit(event) {
   event.preventDefault();
   const currentValue = todoInput.value;
   paintTodo(currentValue);
   saveTodo();
   todoInput.value = "";
+
+  //fade in animation
 }
 
 function loadToDos() {
@@ -105,7 +122,7 @@ function loadToDos() {
 
 function init() {
   loadToDos(); //load things from local storage
-  todoForm.addEventListener("submit", handleSubmit); //Create Todo Form
+  todoForm.addEventListener("submit", handleTodoSubmit); //Create Todo Form
 }
 
 init();

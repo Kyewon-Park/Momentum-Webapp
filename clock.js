@@ -17,13 +17,17 @@ function getTime() {
   const date = new Date();
   const minutes = date.getMinutes();
   const hours = date.getHours();
-  const seconds = date.getSeconds();
   clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
     minutes < 10 ? `0${minutes}` : minutes
-  }:${seconds < 10 ? `0${seconds}` : seconds}`;
+  }`;
   //백틱 기호 사용
   //ternary operations ( mini if )
   //한글자면 앞글자에 0 붙임
+  /*
+  clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+    minutes < 10 ? `0${minutes}` : minutes
+  }:${seconds < 10 ? `0${seconds}` : seconds}`;
+   */
 }
 
 function init() {

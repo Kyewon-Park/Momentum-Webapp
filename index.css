@@ -8,24 +8,31 @@ body {
 }
 
 .css-clock {
-  font-size: 160px;
+  font-size: 200px;
   color: white;
   font-weight: 900;
 }
+
 .css-greetings {
-  font-size: 55px;
+  font-size: 75px;
   color: white;
-  padding-bottom: 40px;
   font-weight: 600;
+}
+
+.todo__container {
+  margin-top: 60px;
+}
+.css-nameForm {
+  margin-top: 20px;
 }
 .css-todoForm__input,
 .css-nameForm__input {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  font-size: 30px;
+  font-size: 35px;
   border-bottom: 2px solid white;
   height: 40px;
-  width: 600px;
+  width: 650px;
   outline: none;
   caret-color: white;
   color: white;
@@ -41,13 +48,62 @@ body {
   list-style: none;
 }
 
+.greeting-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.greeting-box:hover div {
+  opacity: 1;
+}
+.greeting-box > div {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: -65px;
+  top: 35px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.greeting-box i {
+  color: white;
+  font-size: 30px;
+}
+
+/*todo 완료 체크박스 누를 시 삭선 처리*/
 .lineThrough {
   color: #e2e2e2;
   text-decoration-line: line-through;
 }
 
+/*애니메이션*/
+
+/*
+.name1.name2
+
+means a div or an element having both classes together, for example:
+
+<div class="name1 name2">...</div>
+========================================================================
+
+.name1 .name2
+means a div or an element which has a class name1 and any of its child nodes having class name2
+
+<div class="name1">
+    <div class="name2">
+        ...
+    </div>
+</div>
+*/
+
+.todo__container,
+.question,
 .form,
-.greetings {
+.greeting-box {
   display: none;
 }
 .showing {
