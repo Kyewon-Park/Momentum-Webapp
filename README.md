@@ -1,8 +1,7 @@
 # Momentum Webapp with Vanilla Javascript
 
-![StartScreen](./images/JS-clock1.jpg){: width="600" height="300"}
-
-![StartScreen2](/images/JS-clock1.jpg){: width="600" height="300"}
+![JS-clock1](https://user-images.githubusercontent.com/62559049/105815123-d16add80-5ff5-11eb-9b2a-d419a1666e51.png)
+![JS-clock2](https://user-images.githubusercontent.com/62559049/105815127-d334a100-5ff5-11eb-94d5-a94e096f8be8.png)
 
 ## 기능 설명
 
@@ -13,7 +12,7 @@
 5. Todo 리스트 생성/삭제 (localStorage에 저장)
 6. Todo 리스트 체크박스로 취소선 표시
 7. [날씨, 위치 정보 받아 표시]
-   - getCurrentPosition함수를 사용하여서 http에서는 작동이 안되고 localhost 및 https에서만 해당 기능 실행 가능함
+   - getCurrentPosition함수를 사용하여서 http제외한 localhost 및 https에서만 해당 기능 실행 가능함
    - Openweathermap api 사용
    - Weather Icon 및 온도, 위치 받아 표시
 
