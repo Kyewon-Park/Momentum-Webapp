@@ -7,18 +7,54 @@ body {
   justify-content: center;
 }
 
+/*weather container*/
+.css-weather {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.js-weather__img img {
+  width: 80px;
+  height: 80px;
+  filter: brightness(0) invert(100%);
+}
+.css-weather:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span[class*="css-weather"] {
+  color: white;
+}
+.css-weather__temp {
+  font-size: 30px;
+}
+.css-weather__temp-icon {
+  font-size: 25px;
+}
+.css-weather__place {
+  display: block;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+/*Clock*/
 .css-clock {
   font-size: 200px;
   color: white;
   font-weight: 900;
 }
-
+/*greetings*/
 .css-greetings {
   font-size: 75px;
   color: white;
   font-weight: 600;
 }
-
+/*todo*/
 .todo__container {
   margin-top: 60px;
 }
@@ -48,6 +84,7 @@ body {
   list-style: none;
 }
 
+/*greeting-box 옆의 X버튼 */
 .greeting-box {
   display: flex;
   align-items: center;
@@ -80,8 +117,6 @@ body {
   text-decoration-line: line-through;
 }
 
-/*애니메이션*/
-
 /*
 .name1.name2
 
@@ -110,6 +145,7 @@ means a div or an element which has a class name1 and any of its child nodes hav
   display: block;
 }
 
+/*background*/
 .bgImage {
   position: absolute;
   top: 0;
